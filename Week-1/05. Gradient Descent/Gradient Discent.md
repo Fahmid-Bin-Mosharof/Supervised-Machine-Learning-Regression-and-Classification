@@ -3,15 +3,16 @@
 ## Overview
 Gradient Descent is an optimization algorithm used to minimize a function by iteratively moving in the direction of steepest descent as defined by the negative of the gradient. It is widely used in machine learning and deep learning for optimizing cost functions.
 
-## Formula
-The update rule for the parameters \( \theta_j \) is given by:
+### Formula
+For a linear regression problem, where the hypothesis function is represented as:
 
-\[ \theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta_0, \theta_1) \]
+![Gradient Descent Formula](https://latex.codecogs.com/png.latex?%5Ctheta_j%20%3A%3D%20%5Ctheta_j%20-%20%5Calpha%20%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial%5Ctheta_j%7D%20J(%5Ctheta_0%2C%5Ctheta_1))
 
 where:
-- \( \alpha \) is the learning rate (step size).
-- \( J(\theta) \) is the cost function to be minimized.
-- \( \frac{\partial}{\partial \theta_j} J(\theta) \) is the derivative (gradient) of the cost function with respect to \( \theta_j \).
+- α is the learning rate (step size).
+- J(θ) is the cost function to be minimized.
+- (∂/∂θ_j) J(θ) is the gradient of the cost function.
+
 
 ## Steps of Gradient Descent
 1. **Initialize parameters** \( \theta \) randomly or with zeros.
