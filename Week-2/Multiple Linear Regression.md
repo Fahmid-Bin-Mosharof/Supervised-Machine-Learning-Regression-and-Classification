@@ -23,81 +23,81 @@ In this project, we implement the Multiple Linear Regression algorithm to predic
 ## Multiple Linear Regression
 Multiple Linear Regression is an extension of simple linear regression where multiple input features are used to predict a target value. The hypothesis for multiple linear regression is:
 
-\[
+$$
 h_\theta(x) = \theta_0 + \theta_1 x_1 + \theta_2 x_2 + \cdots + \theta_n x_n
-\]
+$$
 
 Where:
-- \( h_\theta(x) \) is the predicted value,
-- \( \theta_0, \theta_1, \dots, \theta_n \) are the model parameters (weights),
-- \( x_1, x_2, \dots, x_n \) are the input features.
+- $h_\theta(x)$ is the predicted value,
+- $\theta_0, \theta_1, \dots, \theta_n$ are the model parameters (weights),
+- $x_1, x_2, \dots, x_n$ are the input features.
 
-The goal is to find the values of \( \theta \) that minimize the **cost function** \( J(\theta) \).
+The goal is to find the values of $\theta$ that minimize the **cost function** $J(\theta)$.
 
 ---
 
 ## Multiple Features
-In multiple linear regression, the model uses more than one feature to make predictions. Given a dataset with \( m \) training examples and \( n \) features, we represent the data in matrix form:
+In multiple linear regression, the model uses more than one feature to make predictions. Given a dataset with $m$ training examples and $n$ features, we represent the data in matrix form:
 
-- **X** is an \( m \times n \) matrix of input features.
+- **X** is an $m \times n$ matrix of input features.
 - **y** is a vector of the corresponding output values.
-- **θ** is the parameter vector (size \( n \times 1 \)).
+- **θ** is the parameter vector (size $n \times 1$).
 
 The hypothesis for multiple features is:
 
-\[
+$$
 h_\theta(X) = X\theta
-\]
+$$
 
 Where:
-- \( X \) is the matrix of input features, including the bias term (intercept),
-- \( \theta \) is the parameter vector,
-- \( h_\theta(X) \) is the vector of predictions.
+- $X$ is the matrix of input features, including the bias term (intercept),
+- $\theta$ is the parameter vector,
+- $h_\theta(X)$ is the vector of predictions.
 
 ---
 
 ## Vectorization
 Vectorization is the technique of representing the data and calculations using matrices and vectors, rather than loops, to perform efficient computations. By using vectorized operations, we can drastically improve the performance and reduce the computation time.
 
-The cost function \( J(\theta) \) in vectorized form is:
+The cost function $J(\theta)$ in vectorized form is:
 
-\[
+$$
 J(\theta) = \frac{1}{2m} \sum_{i=1}^{m} \left( h_\theta(x^{(i)}) - y^{(i)} \right)^2
-\]
+$$
 
 In vectorized form, this becomes:
 
-\[
+$$
 J(\theta) = \frac{1}{2m} (X\theta - y)^T (X\theta - y)
-\]
+$$
 
 Similarly, the gradient for gradient descent is:
 
-\[
+$$
 \text{grad} = \frac{1}{m} X^T (X\theta - y)
-\]
+$$
 
 Where:
-- \( X \) is the matrix of input features,
-- \( y \) is the vector of output values,
-- \( \theta \) is the parameter vector.
+- $X$ is the matrix of input features,
+- $y$ is the vector of output values,
+- $\theta$ is the parameter vector.
 
 ---
 
 ## Gradient Descent for Multiple Linear Regression
-The goal of **Gradient Descent** is to minimize the cost function \( J(\theta) \). In this case, we use the gradient descent algorithm to update the values of \( \theta \) iteratively.
+The goal of **Gradient Descent** is to minimize the cost function $J(\theta)$. In this case, we use the gradient descent algorithm to update the values of $\theta$ iteratively.
 
 The gradient descent update rule is:
 
-\[
+$$
 \theta := \theta - \alpha \frac{1}{m} X^T (X\theta - y)
-\]
+$$
 
 Where:
-- \( \alpha \) is the learning rate (controls the step size),
-- \( X \) is the matrix of input features,
-- \( \theta \) is the parameter vector,
-- \( y \) is the vector of output values.
+- $\alpha$ is the learning rate (controls the step size),
+- $X$ is the matrix of input features,
+- $\theta$ is the parameter vector,
+- $y$ is the vector of output values.
 
 ---
 
