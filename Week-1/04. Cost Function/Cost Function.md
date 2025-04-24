@@ -8,9 +8,9 @@ A **Cost Function** is a mathematical function used to measure the performance o
 
 For a linear regression problem, where the hypothesis function is represented as:
 
-\[
+$$
 h\_\theta(x) = mx + c
-\]
+$$
 
 The Mean Squared Error (MSE) cost function is:
 
@@ -24,6 +24,8 @@ Where:
 - \(m\) is the number of training examples.
 - \(h\_\theta(x) = mx + c\) is the hypothesis function (model prediction).
 - \(y\) is the actual output.
+
+---
 
 ## Types of Cost Functions
 
@@ -69,15 +71,15 @@ A **Cost Function** is a mathematical function used to measure the performance o
 
 For a linear regression problem, where the hypothesis function is represented as:
 
-\[
+$$
 h\_\theta(x) = mx + c
-\]
+$$
 
 The Mean Squared Error (MSE) cost function is:
 
-\[
+$$
 J(\theta) = \frac{1}{2m} \sum*{i=1}^{m} (h*\theta(x^{(i)}) - y^{(i)})^2
-\]
+$$
 
 Where:
 
